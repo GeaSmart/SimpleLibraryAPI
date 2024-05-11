@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleLibraryAPI", "SimpleLibraryAPI\SimpleLibraryAPI.csproj", "{2E18DBC2-1789-459F-B222-CF9B2BAB9CAA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benchmark", "Benchmark\Benchmark.csproj", "{2804CCA5-3EA0-4ED1-88B2-A2C79465C728}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2E18DBC2-1789-459F-B222-CF9B2BAB9CAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E18DBC2-1789-459F-B222-CF9B2BAB9CAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E18DBC2-1789-459F-B222-CF9B2BAB9CAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2804CCA5-3EA0-4ED1-88B2-A2C79465C728}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2804CCA5-3EA0-4ED1-88B2-A2C79465C728}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2804CCA5-3EA0-4ED1-88B2-A2C79465C728}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2804CCA5-3EA0-4ED1-88B2-A2C79465C728}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

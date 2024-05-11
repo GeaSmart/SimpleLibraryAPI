@@ -17,7 +17,7 @@ namespace SimpleLibraryAPI.Controllers
         [HttpGet]
         public async Task<List<Autor>> Get()
         {
-            return await context.Autores.ToListAsync();
+            return await context.Autores.AsNoTracking().ToListAsync();
         }
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] Autor autor)
