@@ -1,6 +1,4 @@
-﻿using System;
-using BenchmarkDotNet.Attributes;
-using BenchmarkDotNet.Running;
+﻿using BenchmarkDotNet.Attributes;
 using Microsoft.EntityFrameworkCore;
 using SimpleLibraryAPI;
 using SimpleLibraryAPI.Entidades;
@@ -8,26 +6,27 @@ using SimpleLibraryAPI.Entidades;
 [MemoryDiagnoser]
 public class EfBenchmark
 {
-    private ApplicationDbContext dbContext;
-
     [Benchmark]
     public List<Autor> GetAll()
     {
-        var options = new DbContextOptionsBuilder<ApplicationDbContext>()
+        ApplicationDbContext dbContext = new ApplicationDbContext(
+            new DbContextOptionsBuilder<ApplicationDbContext>()
             .UseSqlServer("server=.;database=SimpleLibraryAPI;integrated security=true;Trust Server Certificate=true")
-            .Options;
+            .Options);
 
-        dbContext = new ApplicationDbContext(options);
-        return dbContext.Autores.ToList();
+        return dbContext.Autores
+            .ToList();
     }
     [Benchmark]
     public List<Autor> GetAllWithAsNoTracking()
     {
-        var options = new DbContextOptionsBuilder<ApplicationDbContext>()
+        ApplicationDbContext dbContext = new ApplicationDbContext(
+            new DbContextOptionsBuilder<ApplicationDbContext>()
             .UseSqlServer("server=.;database=SimpleLibraryAPI;integrated security=true;Trust Server Certificate=true")
-            .Options;
+            .Options);
 
-        dbContext = new ApplicationDbContext(options);
-        return dbContext.Autores.AsNoTracking().ToList();
+        return dbContext.Autores
+            .AsNoTracking()
+            .ToList();
     }
 }
